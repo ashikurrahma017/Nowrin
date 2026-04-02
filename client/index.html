@@ -6,45 +6,43 @@
 </head>
 <body>
 
-<div class="container">
+<!-- LOGIN PAGE -->
+<div id="authPage" class="auth-container">
 
-  <!-- LEFT SIDE -->
-  <div class="left">
-    <h1 class="logo">Nowrin</h1>
-    <p>Connect with friends and the world around you 💙</p>
-  </div>
+  <h1 class="logo">Nowrin 💙</h1>
 
-  <!-- RIGHT SIDE LOGIN -->
-  <div class="right">
-    <div class="login-box">
-      <input id="username" placeholder="Email or Username">
-      <input id="password" type="password" placeholder="Password">
+  <div class="login-box">
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
 
-      <button class="login-btn" onclick="login()">Log In</button>
-
-      <button class="register-btn" onclick="register()">Create New Account</button>
-    </div>
+    <button class="login-btn" onclick="login()">Login</button>
+    <button class="register-btn" onclick="register()">Register</button>
   </div>
 
 </div>
 
-<hr>
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none;">
 
-<!-- POST SECTION -->
-<div class="post-box">
-  <input id="postInput" placeholder="What's on your mind?">
-  <button onclick="createPost()">Post</button>
+  <h2>Welcome to Nowrin</h2>
+
+  <!-- POST -->
+  <div class="post-box">
+    <input id="postInput" placeholder="Share something...">
+    <button onclick="createPost()">Post</button>
+  </div>
+
+  <ul id="posts"></ul>
+
+  <!-- CHAT -->
+  <div class="chat-box">
+    <input id="message" placeholder="Type message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <ul id="chat"></ul>
+
 </div>
-
-<ul id="posts"></ul>
-
-<!-- CHAT -->
-<div class="chat-box">
-  <input id="message" placeholder="Type a message">
-  <button onclick="sendMessage()">Send</button>
-</div>
-
-<ul id="chat"></ul>
 
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script src="app.js"></script>
