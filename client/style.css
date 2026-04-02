@@ -1,100 +1,92 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
 }
 
-/* Layout */
-.container {
+/* Center auth */
+.auth-container {
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 90vh;
-  padding: 0 10%;
 }
 
-/* Left Side */
-.left {
-  width: 50%;
-}
-
+/* Logo */
 .logo {
-  color: #1877f2;
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 50px;
+  color: #4facfe;
+  margin-bottom: 20px;
 }
 
-.left p {
-  font-size: 24px;
-}
-
-/* Right Side */
-.right {
-  width: 40%;
-}
-
+/* Glass box */
 .login-box {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   text-align: center;
 }
 
+/* Inputs */
 .login-box input {
-  width: 90%;
+  width: 250px;
   padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #dddfe2;
-  border-radius: 6px;
-  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
 }
 
 /* Buttons */
 .login-btn {
-  width: 95%;
+  width: 260px;
   padding: 12px;
-  background: #1877f2;
-  color: white;
+  margin-top: 10px;
+  background: #4facfe;
   border: none;
-  border-radius: 6px;
-  font-size: 18px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-}
-
-.login-btn:hover {
-  background: #166fe5;
 }
 
 .register-btn {
-  margin-top: 10px;
+  width: 260px;
   padding: 12px;
-  background: #42b72a;
-  color: white;
+  margin-top: 10px;
+  background: #43e97b;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  color: white;
   cursor: pointer;
 }
 
-/* Post */
-.post-box {
+/* Dashboard */
+#dashboard {
+  padding: 20px;
   text-align: center;
-  margin: 20px;
 }
 
+/* Post */
 .post-box input {
+  padding: 10px;
   width: 50%;
+}
+
+.post-box button {
   padding: 10px;
 }
 
 /* Chat */
-.chat-box {
-  text-align: center;
-  margin: 20px;
+.chat-box input {
+  padding: 10px;
+  width: 50%;
 }
 
 ul {
   list-style: none;
-  padding: 0;
-  text-align: center;
 }
