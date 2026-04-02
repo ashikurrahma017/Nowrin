@@ -1,19 +1,100 @@
 body {
-  font-family: Arial;
-  text-align: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
   background: #f0f2f5;
 }
 
-input {
-  padding: 10px;
-  margin: 5px;
+/* Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  padding: 0 10%;
 }
 
-button {
-  padding: 10px;
+/* Left Side */
+.left {
+  width: 50%;
+}
+
+.logo {
+  color: #1877f2;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.left p {
+  font-size: 24px;
+}
+
+/* Right Side */
+.right {
+  width: 40%;
+}
+
+.login-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.login-btn {
+  width: 95%;
+  padding: 12px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
   cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #166fe5;
+}
+
+.register-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background: #42b72a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Post */
+.post-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.post-box input {
+  width: 50%;
+  padding: 10px;
+}
+
+/* Chat */
+.chat-box {
+  text-align: center;
+  margin: 20px;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  text-align: center;
 }
