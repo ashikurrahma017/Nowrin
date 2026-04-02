@@ -3,10 +3,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const http = require("http");
 const { Server } = require("socket.io");
+const path = require("path");
 
 const app = express();
 const server = http.createServer(app);
 
+// Socket setup
 const io = new Server(server, {
   cors: { origin: "*" }
 });
@@ -14,8 +16,11 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect("mongodb+srv://YOUR_MONGO_URL")
+// ✅ MongoDB connection (FROM ENV VARIABLE)
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
@@ -69,4 +74,16 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(5000, () => console.log("Server running on 5000"));
+// ✅ Serve frontend (VERY IMPORTANT for Render)
+app.use(express.static(path.join(__dirname, "../client")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/index.html"));
+});
+
+// Use Render port
+const PORT = process.env.PORT || 5000;
+
+server.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
+});
