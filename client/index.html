@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nowrin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<h1>Nowrin 💙</h1>
+
+<div>
+  <input id="username" placeholder="Username">
+  <input id="password" placeholder="Password">
+  <button onclick="register()">Register</button>
+  <button onclick="login()">Login</button>
+</div>
+
+<hr>
+
+<div>
+  <input id="postInput" placeholder="What's on your mind?">
+  <button onclick="createPost()">Post</button>
+</div>
+
+<ul id="posts"></ul>
+
+<hr>
+
+<div>
+  <input id="message" placeholder="Message">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<ul id="chat"></ul>
+
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
